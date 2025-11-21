@@ -4,12 +4,6 @@ public class MasterOfCeremony {
     private String scriptSegment;
     private boolean onStage;
 
-    //No args constructor
-    public MasterOfCeremony(){
-        this.mcName = "TBD";
-        this.scriptSegment = "TBD";
-        this.onStage = false;
-    }
     //Constructor initialising all parameters
     public MasterOfCeremony ( String mcName, String scriptSegment, boolean onStage ) {
         this.mcName = mcName;

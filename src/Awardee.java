@@ -4,12 +4,6 @@ public class Awardee {
     private AwardCategory category;
     private String awardName;
 
-    //Default constructor
-    public Awardee(){
-        this.fullName= "TBD";
-        this.category= null;
-        this.awardName="TBD";
-    }
     //Constructor initialising all data fields
     public Awardee ( String fullName, AwardCategory category, String awardName ) {
         this.fullName = fullName;
@@ -22,7 +16,7 @@ public class Awardee {
         return fullName;
     }
 
-    public AwardCategory getCategory() {
+    public AwardCategory getAwardCategory() {
         return category;
     }
 
@@ -35,7 +29,7 @@ public class Awardee {
         this.fullName = fullName;
     }
 
-    public void setCategory(AwardCategory category) {
+    public void setAwardCategory(AwardCategory category) {
         this.category = category;
     }
 
@@ -52,5 +46,9 @@ public class Awardee {
         return "Awardee : " + fullName +
                 "\nAward Category : " + category +
                 "\nAward : " + awardName;
+    }
+
+    public void giveAcceptanceSpeech() {
+
     }
 }

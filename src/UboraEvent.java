@@ -1,30 +1,20 @@
-import java.time.LocalTime;
-import java.time.LocalDate;
-import java.time.Duration;
+
 public class UboraEvent {
     //Data Fields
     private String eventName;
     private String location;
-    private LocalDate eventDate;
-    private LocalTime startTime;
-    private Duration duration;
+    private String eventDate;
+    private String startTime;
+    private int durationMinutes;
 
-    //No Args Constructor
-    public UboraEvent() {
-        this.eventName = "TBD";
-        this.location = "TBD";
-        this.eventDate = null;
-        this.startTime = null;
-        this.duration = null;
-    }
-    //Main Constructor with all args
-    public UboraEvent ( String eventName, String location,LocalDate eventDate,
-                      LocalTime startTime, Duration duration ) {
+    //Constructor
+    public UboraEvent ( String eventName, String location,String eventDate,
+                      String startTime, int durationMinutes ) {
         this.eventName = eventName;
         this.location = location;
         this.eventDate = eventDate;
         this.startTime = startTime;
-        this.duration = duration;
+        this.durationMinutes = durationMinutes;
     }
     //Accessors
     public String getEventName() {
@@ -33,14 +23,14 @@ public class UboraEvent {
     public String getLocation() {
         return location;
     }
-    public LocalDate getEventDate() {
+    public String getEventDate() {
         return eventDate;
     }
-    public LocalTime getStartTime() {
+    public String getStartTime() {
         return startTime;
     }
-    public Duration getDuration() {
-        return duration;
+    public int getDurationMinutes() {
+        return durationMinutes;
     }
     //Mutators
 
@@ -52,25 +42,25 @@ public class UboraEvent {
         this.location = location;
     }
 
-    public void setEventDate(LocalDate eventDate) {
+    public void setEventDate(String eventDate) {
         this.eventDate = eventDate;
     }
 
-    public void setStartTime(LocalTime startTime) {
+    public void setStartTime(String startTime) {
         this.startTime = startTime;
     }
 
-    public void setDuration(Duration duration) {
-        this.duration = duration;
+    public void setDurationMinutes(int durationMinutes) {
+        this.durationMinutes = durationMinutes;
     }
     //Override to String methods and Dis[play the Ubora event details
     @Override
     public String toString (){
         return "===Ubora Event Details===" +
-                "\nName : " + getEventName() +
+                "\nName : " + eventName +
                 "\nLocation : " + location +
                 "\nDate : " + eventDate +
                 "\nStart Time : " + startTime +
-                "\nDuration : " + duration;
+                "\nDuration : " + durationMinutes;
     }
 }
